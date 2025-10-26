@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Experts - F360 Infratech</title>
+    
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">
+            F360 Infratech
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#owner-tools">Home Owner</a></li>
+                <li><a href="engineers.html">Engineer / Architect</a></li> 
+                <li><a href="index.html#contractors">Contractor</a></li>
+                <li><a href="index.html#store">F360 Store</a></li>
+                <li><a href="index.html#services">AI Cost Estimate</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">
+            Login / Signup
+        </button>
+    </header>
+    <main class="page-content">
+        <section class="search-hero">
+            <h1>Find Verified Engineers & Architects</h1>
+            <p>Search by location, specialization, or project type.</p>
+        </section>
+
+        <div class="filter-bar-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search by name, city, or specialization...">
+                <button class="apply-filter-btn">🔍 Search</button>
+            </div>
+            <div class="filter-dropdowns">
+                <select id="specialization-filter">
+                    <option value="">Specialization (All)</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Interior Design">Interior Design</option>
+                    <option value="Structural Audit">Structural Audit</option>
+                    <option value="Landscape & Sustainable Design">Landscape & Sustainable Design</option>
+                    <option value="Urban Planning">Urban Planning</option>
+                    <option value="Building Renovation">Building Renovation</option>
+                    <option value="Modern Home Design">Modern Home Design</option>
+                </select>
+                <select id="experience-filter">
+                    <option value="">Experience (Any)</option>
+                    <option value="1-5">1-5 Years</option>
+                    <option value="5-10">5-10 Years</option>
+                    <option value="10+">10+ Years</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="engineer-list-section">
+            <h2>Showing 8 Verified Experts in Your Area</h2>
+            
+            <div class="engineer-grid">
+                </div>
+            
+            <button class="load-more-btn">Load More Engineers</button>
+
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col logo-col">
+                <h3>F360 Infratech</h3>
+                <p>Sapno ka Ghar, Ab Expert ke Sath.</p>
+                <div class="social-links">
+                    <a href="#">FB</a> | 
+                    <a href="#">Insta</a> | 
+                    <a href="#">Linked</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">AI Estimate</a></li>
+                    <li><a href="engineers.html">Engineers</a></li>
+                    <li><a href="index.html#contractors">Contractor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <p>Email: info@f360.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        
+        <div class="copyright-bar">
+            <p>&copy; 2024 F360 Infratech. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div id="loginView" class="form-view active-view">
+                <h2>Login to F360 Infratech</h2>
+                <p>Continue your project journey.</p>
+
+                <form>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="primary-cta">Login</button>
+                </form>
+
+                <p class="switch-form">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </div>
+
+            <div id="signupView" class="form-view">
+                <h2>Join F360 Infratech</h2>
+                <p>Please select your role to continue registration:</p>
+
+                <div class="role-grid">
+                    <button class="role-card" data-role="owner">
+                        🏠 Home Owner
+                    </button>
+                    <button class="role-card" data-role="engineer">
+                        🧑‍💼 Engineer / Architect
+                    </button>
+                    <button class="role-card" data-role="contractor">
+                        👷 Contractor
+                    </button>
+                  
+                </div>
+                
+                <p class="switch-form"><a href="#" id="switchToLogin">Back to Login</a></p>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>

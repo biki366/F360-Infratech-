@@ -1,0 +1,1003 @@
+/* Universal Reset - Saare elements ke default settings theek karte hain */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+/* Global Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Original Color Palette (As per Screenshots) --- */
+:root {
+    --primary-color: #1a237e;     /* Deep Indigo Blue (Trust, Stability, Main Header) */
+    --secondary-color: #4CAF50;   /* Vibrant Green (CTA Buttons, Success) */
+    --text-color: #333;
+    --light-text-color: #666;
+    --bg-color: #f0f2f5;         /* Light Grey/Modern Background */
+    --white: #fff;
+    --border-color: #ccc;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- Header Styling (Navigation Bar) --- */
+.main-header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em; 
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.main-nav ul li a {
+    text-decoration: none; 
+    color: var(--text-color);
+    font-size: 1.05em;
+    transition: color 0.3s; 
+}
+
+.main-nav ul li a:hover {
+    color: var(--secondary-color); 
+}
+
+/* Login/Signup Button Styling */
+.cta-button {
+    background-color: var(--secondary-color); 
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3e8e41; 
+}
+
+/* --- Hero Section Styling (Home Page) --- */
+
+.hero-section {
+    /* Background Color: Deep Indigo Blue */
+    background-color: var(--primary-color); 
+    color: var(--white);
+    padding: 30px 50px 100px 50px; 
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Optional Overlay (if needed for background image, but kept simple here) */
+.hero-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: var(--primary-color); 
+     opacity: 0.9; 
+     z-index: 1;
+     /* Remove this block if you want to use a strong background image instead of solid color */
+}
+
+/* Text and Buttons Container */
+.hero-content {
+    max-width: 50%; 
+    z-index: 10; 
+    padding-right: 40px;
+    padding-top: 50px; 
+}
+
+.hero-content h1 {
+    font-size: 3.2em;
+    color: var(--white); 
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #c7d1e0;
+    margin-bottom: 30px;
+}
+
+/* Primary Button (Green) */
+.primary-cta {
+    background-color: var(--secondary-color); 
+    color: var(--white);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Ensure it works for 'a' tags too */
+}
+
+.primary-cta:hover {
+    background-color: #3e8e41; 
+}
+
+/* Secondary Button Styling (White Border) */
+.secondary-cta {
+    background-color: transparent; 
+    color: var(--white);
+    border: 2px solid var(--white); 
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.secondary-cta:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Right Column: Image Container */
+.hero-image-container-wavy {
+    width: 50%; 
+    height: 100%;
+    position: relative;
+    z-index: 5;
+    /* Wave Effect (Simplified/Adjusted for screenshot look) */
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: var(--white); /* Wave ka White Color */
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: 480px; 
+    height: 500px; 
+    background-color: transparent; 
+    border-radius: 0; 
+    box-shadow: none; 
+    
+    /* Image related styles (Assuming you have an image) */
+    /* background-image: url('../images/engineer.png'); */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+    transform: translateY(-20px) translateX(-15%); 
+    z-index: 10;
+    overflow: hidden; 
+    
+    /* Fallback/Placeholder Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-style: italic;
+}
+
+
+/* --- Mini Feature Bar --- */
+.mini-feature-bar {
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    background-color: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+}
+
+.mini-card {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.95em;
+    border-right: 1px solid #eee;
+}
+
+.mini-card:last-child {
+    border-right: none;
+}
+
+.spacer {
+    height: 100px; 
+    background-color: var(--white); 
+}
+
+/* --- Core Advantages Section --- */
+
+.core-advantages-section {
+    padding: 120px 50px 60px 50px; 
+    background-color: var(--white); 
+    margin-top: -50px; 
+}
+
+.advantage-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.advantage-box {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.pw-icon { 
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--secondary-color); 
+}
+
+.advantage-box h4 {
+    font-size: 1.25em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.advantage-box p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- Home Owner Tools Section (Re-used Styles) --- */
+
+.owner-tools-section, .tools-section {
+    padding: 100px 50px;
+    background-color: #f7f7f7; 
+}
+
+.owner-tools-container, .tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.tools-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.tools-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.tools-content h3 {
+    font-size: 1.5em;
+    color: var(--secondary-color); 
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.tools-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.tools-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-placeholder, .estimator-placeholder, .estimator-form-box {
+    width: 100%;
+    height: 350px;
+    background-color: #e0e6ec; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: bold;
+    border: 2px dashed #b0b8c0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* CTA Color for Home Owner Tools Section (Deep Indigo) */
+.secondary-color-cta {
+    background-color: var(--primary-color) !important; 
+    color: var(--white) !important;
+    border: 2px solid var(--primary-color) !important;
+    margin-top: 20px;
+}
+
+.secondary-color-cta:hover {
+    background-color: #0f184e !important; /* Darker Indigo */
+}
+
+
+/* --- Professional Join Sections --- */
+
+.professionals-join-section {
+    padding: 80px 50px;
+    background-color: var(--white); 
+}
+
+.join-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+/* Engineer Theme (Green in screenshot) */
+.expert-theme {
+    background-color: var(--secondary-color); /* #4CAF50 */
+    color: var(--white);
+}
+
+.expert-theme h2 {
+    color: var(--primary-color); 
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+.expert-theme p {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Contractor Theme (Darker Green in screenshot) */
+.contractor-theme {
+    background-color: #388e3c; /* Darker Green */
+    color: var(--white); 
+    margin-top: 50px; 
+}
+
+.contractor-theme h2 {
+    color: var(--white); 
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+.contractor-theme p {
+    color: #c7d1e0;
+    margin-bottom: 30px;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Button Color inside these sections (Black/Dark Contrast) */
+.join-container .primary-cta {
+    background-color: #000000;
+}
+.join-container .primary-cta:hover {
+    background-color: #333;
+}
+
+
+/* --- AI Cost Estimator Form Styling --- */
+#services .tools-container {
+    flex-direction: row-reverse; /* Left Content, Right Form */
+}
+
+/* AI Estimator Form Box Styling */
+.estimator-form-box {
+    height: auto; /* Allow form content to dictate height */
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: var(--white);
+    border: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.estimator-form-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+.estimator-form-box input[type="number"],
+.estimator-form-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.full-width-cta {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    background-color: var(--secondary-color); /* Green */
+}
+.full-width-cta:hover {
+     background-color: #388e3c; /* Darker Green */
+}
+
+
+/* --- Vendor CTA Section Styling (Home Page) --- */
+
+.vendor-cta-section {
+    /* Dark Blue section as seen in the screenshot */
+    background-color: #212121; 
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.vendor-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vendor-content h2 {
+    font-size: 2.2em;
+    color: var(--white); 
+    margin-bottom: 15px;
+}
+
+.vendor-content p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Secondary CTA Color (Dark Blue) */
+.vendor-cta-section .secondary-color-cta {
+    background-color: var(--secondary-color); /* Green */
+    color: var(--white);
+    padding: 15px 40px;
+}
+
+.vendor-cta-section .secondary-color-cta:hover {
+    background-color: #3e8e41;
+}
+
+
+/* --- Footer Section Styling --- */
+
+footer {
+    /* Footer colour is Deep Indigo Blue */
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 50px 50px 0 50px;
+    font-size: 0.95em;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #1a304a; 
+}
+
+.footer-col {
+    width: 23%; 
+}
+
+.logo-col h3 {
+    color: var(--secondary-color); 
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-col h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #c7d1e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--secondary-color);
+}
+
+.social-links a {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.copyright-bar {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: #777;
+}
+
+/* --- Modal (Login/Signup Pop-up) Styling --- */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 400px; 
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Form Input Styling */
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-content .primary-cta {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.switch-form {
+    margin-top: 20px !important;
+    font-size: 0.9em;
+}
+
+.switch-form a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.form-view {
+    display: none;
+}
+
+.active-view {
+    display: block; 
+}
+
+/* Role Selector Grid Design */
+.role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.role-card {
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    padding: 20px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    transition: background-color 0.2s, border-color 0.2s;
+    height: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+}
+
+.role-card:hover {
+    background-color: #e6ffe6; 
+    border-color: var(--secondary-color);
+}
+
+.file-label {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #6c757d; 
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+
+/* --- Engineers Page Specific Styles --- */
+
+/* Main Content ka container */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 80px 20px;
+}
+
+/* Search Hero Section */
+.search-hero {
+    text-align: center;
+    padding: 40px 0 30px 0;
+}
+
+.search-hero h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Filter and Search Bar Styling */
+.filter-bar-container {
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+.search-box button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-dropdowns select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.apply-filter-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* --- Engineer List and Cards Styling --- */
+.engineer-list-section h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+}
+
+.engineer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.engineer-card {
+    background-color: var(--white);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--secondary-color);
+}
+
+.load-more-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Profile Page Specific Styles --- */
+.profile-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-summary {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.profile-large-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid var(--primary-color);
+}
+
+.engineer-title {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.chat-btn {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Button override for secondary style in profile */
+.hire-btn {
+    background-color: var(--primary-color) !important;
+    color: var(--white);
+}
+
+.detail-list li {
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.project-box {
+    background-color: #e6ffe6;
+    border: 1px solid var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+
+/* --- Media Queries (Responsiveness) --- */
+
+@media (max-width: 992px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main-nav ul {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .hero-section {
+        flex-direction: column; 
+        height: auto; 
+        padding-bottom: 150px;
+        text-align: center;
+    }
+    .hero-content, .tools-content {
+        max-width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+    .hero-image-container-wavy {
+        display: none;
+    }
+    .hero-ctas {
+        display: flex; 
+        justify-content: center;
+    }
+    .mini-feature-bar {
+        width: 90%;
+        flex-wrap: wrap;
+        bottom: -70px;
+    }
+    .mini-card {
+        width: 48%; 
+        border-right: none;
+    }
+    .core-advantages-section {
+        padding: 100px 20px 40px 20px;
+    }
+    .advantage-grid {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .advantage-box {
+        min-width: 45%; 
+        margin-bottom: 20px;
+    }
+    .owner-tools-container, .tools-container, .profile-details-container {
+        flex-direction: column; 
+        gap: 30px;
+        text-align: center;
+    }
+    .tools-content, .tools-image {
+        max-width: 100%;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .footer-col {
+        width: 48%;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .profile-summary {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    .filter-dropdowns {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .filter-dropdowns select {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-ctas button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    .advantage-grid, .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantage-box, .footer-col {
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+    .search-box input, .search-box button {
+        border-radius: 5px !important;
+        width: 100%;
+    }
+    .search-box input {
+        margin-bottom: 10px;
+    }
+    .filter-dropdowns select {
+        flex-basis: 100%;
+    }
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+}

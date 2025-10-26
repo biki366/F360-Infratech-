@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F360 Infratech - Sapno ka Ghar, Ab Expert ke Sath.</title>
+    
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo">
+            F360 Infratech
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#owner-tools">Home Owner</a></li>
+                <li><a href="engineers.html">Engineer / Architect</a></li> 
+                <li><a href="index.html#contractors">Contractor</a></li>
+                <li><a href="index.html#store">F360 Store</a></li>
+                <li><a href="index.html#services">AI Cost Estimate</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">
+            Login / Signup
+        </button>
+    </header>
+    
+    <main class="hero-section" id="hero">
+        <div class="hero-content">
+            <h1>Sapno ka Ghar, Ab Expert ke Sath.</h1>
+            <p>India's first platform connecting homeowners with verified Engineers, Architects, and trusted Contractors for seamless construction management.</p>
+            
+            <div class="hero-ctas">
+                <button class="primary-cta">Start Project 🚀</button>
+                <button class="secondary-cta">Meet Our Experts</button>
+            </div>
+        </div>
+
+        <div class="hero-image-container-wavy">
+            <div class="image-placeholder"></div> 
+        </div>
+        
+        <div class="mini-feature-bar">
+            <div class="mini-card">🏠 Owner Tools</div>
+            <div class="mini-card">🧑‍💼 Engineer Platform</div>
+            <div class="mini-card">👷 Contractor Network</div>
+            <div class="mini-card">💰 AI Estimator</div>
+        </div>
+
+    </main>
+    <section class="spacer"></section>
+
+    <section class="core-advantages-section">
+        <div class="advantage-grid">
+            <div class="advantage-box">
+                <span class="pw-icon">🧑‍🔧</span>
+                <h4>Verified Experts</h4>
+                <p>100+ Background Checked Engineers & Contractors on board.</p>
+            </div>
+            <div class="advantage-box">
+                <span class="pw-icon">🔒</span>
+                <h4>Secure Milestones</h4>
+                <p>Payments released only after project milestones are approved by you.</p>
+            </div>
+            <div class="advantage-box">
+                <span class="pw-icon">📸</span>
+                <h4>Digital Progress</h4>
+                <p>24x7 Real-time photo updates and timeline monitoring in the app.</p>
+            </div>
+            <div class="advantage-box">
+                <span class="pw-icon">💰</span>
+                <h4>AI Cost Estimate</h4>
+                <p>Get instant, accurate budget breakdown before you start construction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-tools-section" id="owner-tools">
+        <div class="owner-tools-container">
+            <div class="tools-content">
+                <h2>Manage Your Home Project, Seamlessly.</h2>
+                <h3>Get a dedicated dashboard to track progress, payments, and communicate with experts.</h3>
+                <p>Ek user-friendly dashboard jahan aap apne construction project ki har chiz ko track kar sakte hain. Live updates, document management, aur direct communication - sab ek jagah.</p>
+                <button class="primary-cta secondary-color-cta">
+                    Explore Dashboard Features 🏠
+                </button>
+            </div>
+            <div class="tools-image">
+                <div class="dashboard-placeholder">
+                    { Home Owner Dashboard Preview }
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="professionals-join-section" id="experts">
+        <div class="join-container expert-theme">
+            <h2>Grow Your Career. Join the Expert Network.</h2>
+            <p>Design projects, manage sites, and get paid securely. India's top homeowners are waiting for verified Engineers and Architects like you.</p>
+            <div class="stats-bar">
+                <span>✅ Verified KYC</span>
+                <span>📈 100+ Projects Handled</span>
+                <span>💰 Guaranteed Payouts</span>
+            </div>
+            <button class="primary-cta">
+                Apply as an Engineer/Architect 🧑‍💼
+            </button>
+        </div>
+    </section>
+    
+    <section class="professionals-join-section" id="contractors">
+        <div class="join-container contractor-theme">
+            <h2>Expand Your Business. Get Assured Projects.</h2>
+            <p>Hassle-free project assignment, digital labour management, and direct material ordering from vendors—all in one place.</p>
+            <div class="stats-bar">
+                <span>✅ Assured Workload</span>
+                <span>👷 Labour Management Tools</span>
+                <span>🚚 Easy Material Ordering</span>
+            </div>
+            <button class="primary-cta">
+                Register as a Contractor 👷
+            </button>
+        </div>
+    </section>
+    
+    <section class="tools-section" id="services">
+        <div class="tools-container">
+            <div class="tools-content">
+                <h2>AI Powered Cost Estimation</h2>
+                <h3>No more guesswork. Get instant, accurate project cost estimates.</h3>
+                <p>Hamara smart AI tool aapke project ke area, location aur material ki quality ke hisaab se turant (instant) ek detailed cost breakup deta hai. Construction shuru karne se pehle budget plan kijiye.</p>
+                
+                <button class="primary-cta estimate-cta">
+                    Calculate My Cost Now 💰
+                </button>
+            </div>
+           <div class="tools-image">
+    <div class="estimator-form-box"> 
+        <form id="ai-estimator-form">
+            <label for="city">1. City/Location Select Karein:</label>
+            <select id="city" required>
+                <option value="">-- Sheher Chunein --</option>
+                <option value="delhi">Delhi/NCR</option>
+                <option value="mumbai">Mumbai/Pune</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="other">Other City</option>
+            </select>
+
+            <label for="project-type">2. Project Type Chunein:</label>
+            <select id="project-type" required>
+                <option value="">-- Project Type --</option>
+                <option value="new-home">Naya Ghar (New Home)</option>
+                <option value="office">Commercial/Office</option>
+                <option value="renovation">Renovation (Sudhaar)</option>
+            </select>
+            
+            <label for="area">3. Total Area (Sq. Ft.) Likhein:</label>
+            <input type="number" id="area" placeholder="e.g., 1200 Sq. Ft." required min="100">
+            
+            <label for="quality">4. Construction Quality Select Karein:</label>
+            <select id="quality" required>
+                <option value="standard">Standard/Budget Quality</option>
+                <option value="premium">Premium Quality</option>
+                <option value="luxury">Luxury/High-End</option>
+            </select>
+
+            <button type="submit" class="primary-cta estimate-cta full-width-cta">
+                Estimate Cost
+            </button>
+        </form>
+        <div id="estimate-result" style="margin-top: 25px; font-weight: bold; text-align: center; color: var(--primary-color);">
+            <p>Enter details above for instant cost estimation.</p>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="vendor-cta-section" id="store">
+        <div class="vendor-content">
+            <h2>Grow Your Business. Join Our Vendor Network.</h2>
+            <p>Cement, Steel, Bricks, aur saare construction materials ko directly hazaron verified contractors tak pahunchao. Order management aur fast payments. </p>
+            
+            <button class="primary-cta secondary-color-cta">
+                List Your Products Today 🧱
+            </button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col logo-col">
+                <h3>F360 Infratech</h3>
+                <p>Sapno ka Ghar, Ab Expert ke Sath.</p>
+                <div class="social-links">
+                    <a href="#">FB</a> | 
+                    <a href="#">Insta</a> | 
+                    <a href="#">Linked</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">AI Estimate</a></li>
+                    <li><a href="engineers.html">Engineers</a></li>
+                    <li><a href="index.html#contractors">Contractors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <p>Email: info@f360.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        
+        <div class="copyright-bar">
+            <p>&copy; 2024 F360 Infratech. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div id="loginView" class="form-view active-view">
+                <h2>Login to F360 Infratech</h2>
+                <p>Continue your project journey.</p>
+
+                <form>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="primary-cta">Login</button>
+                </form>
+
+                <p class="switch-form">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </div>
+
+            <div id="signupView" class="form-view">
+                <h2>Join F360 Infratech</h2>
+                <p>Please select your role to continue registration:</p>
+
+                <div class="role-grid">
+                    <button class="role-card" data-role="owner">
+                        🏠 Home Owner
+                    </button>
+                    <button class="role-card" data-role="engineer">
+                        🧑‍💼 Engineer / Architect
+                    </button>
+                    <button class="role-card" data-role="contractor">
+                        👷 Contractor
+                    </button>
+                    
+                </div>
+                
+                <p class="switch-form"><a href="#" id="switchToLogin">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
